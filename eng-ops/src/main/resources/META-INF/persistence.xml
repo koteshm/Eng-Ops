@@ -1,0 +1,17 @@
+<persistence xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0" xmlns="http://java.sun.com/xml/ns/persistence">
+    <persistence-unit name="postgressPU" transaction-type="RESOURCE_LOCAL">
+        <class>com.infosys.engops.entities.UserDetails</class>
+        <class>com.infosys.engops.entities.BestEstimates</class>
+        <class>com.infosys.engops.entities.Actuals</class>
+        <properties>
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL94Dialect"/>
+            <property name="show_sql" value="true"/>
+            <property name="hibernate.temp.use_jdbc_metadata_defaults" value="false"/>
+            <property name="hibernate.default_schema" value="public"/>
+            <!-- <property name="hibernate.hbm2ddl.auto" value="create"/> -->
+        </properties>
+    </persistence-unit>
+</persistence>
